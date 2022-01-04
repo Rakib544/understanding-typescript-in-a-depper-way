@@ -25,4 +25,4 @@ function combineInputs(input1: number | string, input2: number | string) {
 }
 
 console.log(combineInputs(1, 2));
-console.log(combineInputs("hello", "world"));
+console.log(combineInputs("hello", "world123"));
