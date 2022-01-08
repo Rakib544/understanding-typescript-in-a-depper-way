@@ -49,9 +49,9 @@
 //   }, 0);
 // };
 // console.log(addNumbers(1, 2, 4, 6));
-var userInfo = {
-    name: "Rakib",
-    email: "md.rakib10122003@gmail.com",
-};
-var username = userInfo.name, email = userInfo.email;
-console.log(username);
+// const userInfo = {
+//   name: "Rakib",
+//   email: "md.rakib10122003@gmail.com",
+// };
+// const { name: username, email } = userInfo;
+// console.log(username);

@@ -64,11 +64,11 @@
 
 // console.log(addNumbers(1, 2, 4, 6));
 
-const userInfo = {
-  name: "Rakib",
-  email: "md.rakib10122003@gmail.com",
-};
+// const userInfo = {
+//   name: "Rakib",
+//   email: "md.rakib10122003@gmail.com",
+// };
 
-const { name: username, email } = userInfo;
+// const { name: username, email } = userInfo;
 
-console.log(username);
+// console.log(username);
