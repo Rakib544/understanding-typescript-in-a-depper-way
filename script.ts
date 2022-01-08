@@ -38,3 +38,5 @@ const user1: UserInfo = {
   email: "md.rakib10122003@gmail.com",
   id: 457100,
 };
+
+console.log(user1.id.toString());
