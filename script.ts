@@ -27,30 +27,30 @@
 // console.log(combineInputs(1, 2));
 // console.log(combineInputs("hello", "world123"));
 
-type UserInfo = {
-  name: string;
-  email: string;
-  id: number | string;
-};
+// type UserInfo = {
+//   name: string;
+//   email: string;
+//   id: number | string;
+// };
 
-const user1: UserInfo = {
-  name: "Rakib",
-  email: "md.rakib10122003@gmail.com",
-  id: 457100,
-};
+// const user1: UserInfo = {
+//   name: "Rakib",
+//   email: "md.rakib10122003@gmail.com",
+//   id: 457100,
+// };
 
-console.log(user1.id.toString());
+// console.log(user1.id.toString());
 
-const addNumber = (num1: number, num2: number): number => {
-  return num1 + num2;
-};
+// const addNumber = (num1: number, num2: number): number => {
+//   return num1 + num2;
+// };
 
-console.log(addNumber(2, 5));
+// console.log(addNumber(2, 5));
 
-const names: string[] = ["Rakib", "Shehab", "Mamun", "Sakil"];
+// const names: string[] = ["Rakib", "Shehab", "Mamun", "Sakil"];
 
-const activeUsers: string[] = ["User"];
+// const activeUsers: string[] = ["User"];
 
-activeUsers.push(...names);
+// activeUsers.push(...names);
 
-console.log(activeUsers);
+// console.log(activeUsers);
