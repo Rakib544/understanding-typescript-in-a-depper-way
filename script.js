@@ -10,3 +10,7 @@ var addNumber = function (num1, num2) {
     return num1 + num2;
 };
 console.log(addNumber(2, 5));
+var names = ["Rakib", "Shehab", "Mamun", "Sakil"];
+var activeUsers = ["User"];
+activeUsers.push.apply(activeUsers, names);
+console.log(activeUsers);

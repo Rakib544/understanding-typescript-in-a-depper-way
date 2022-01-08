@@ -46,3 +46,11 @@ const addNumber = (num1: number, num2: number): number => {
 };
 
 console.log(addNumber(2, 5));
+
+const names: string[] = ["Rakib", "Shehab", "Mamun", "Sakil"];
+
+const activeUsers: string[] = ["User"];
+
+activeUsers.push(...names);
+
+console.log(activeUsers);
