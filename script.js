@@ -42,3 +42,16 @@
 // const activeUsers: string[] = ["User"];
 // activeUsers.push(...names);
 // console.log(activeUsers);
+// Practice with rest parameter
+// const addNumbers = (...numbers: number[]): number => {
+//   return numbers.reduce((sum, num) => {
+//     return sum + num;
+//   }, 0);
+// };
+// console.log(addNumbers(1, 2, 4, 6));
+var userInfo = {
+    name: "Rakib",
+    email: "md.rakib10122003@gmail.com",
+};
+var username = userInfo.name, email = userInfo.email;
+console.log(username);
