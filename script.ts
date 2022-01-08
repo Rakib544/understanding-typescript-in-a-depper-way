@@ -40,3 +40,9 @@ const user1: UserInfo = {
 };
 
 console.log(user1.id.toString());
+
+const addNumber = (num1: number, num2: number): number => {
+  return num1 + num2;
+};
+
+console.log(addNumber(2, 5));

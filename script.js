@@ -6,3 +6,7 @@ var user1 = {
     id: 457100,
 };
 console.log(user1.id.toString());
+var addNumber = function (num1, num2) {
+    return num1 + num2;
+};
+console.log(addNumber(2, 5));
