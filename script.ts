@@ -1,19 +1,27 @@
 class Department {
-  name: string;
+  // private name:string;
+  private subjects: string[] = [];
 
-  constructor(n: string) {
-    this.name = n;
+  constructor(private readonly id: number | string, private name: string) {
+    // this.name = name;
   }
 
   describe(this: Department) {
-    console.log(`Department: ${this.name}`);
+    console.log(`Department(${this.id}): ${this.name}`);
+  }
+
+  addSubjects(subjectName: string) {
+    //   this.id = 67;
+    this.subjects.push(subjectName);
+  }
+
+  showSubjects() {
+    console.log(this.subjects);
   }
 }
 
-const business = new Department("business");
+const computer = new Department(66, "computer");
 
-business.describe();
-
-const businessCopy = { name: "Computer", describe: business.describe };
-
-businessCopy.describe();
+computer.addSubjects("Data structure and algorithm");
+computer.showSubjects();
+computer.describe();
