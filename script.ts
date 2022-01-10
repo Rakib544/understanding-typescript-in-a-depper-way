@@ -6,6 +6,10 @@ class Department {
     // this.name = name;
   }
 
+  static createEmployee(name: string) {
+    return { name };
+  }
+
   describe(this: Department) {
     console.log(`Department(${this.id}): ${this.name}`);
   }
@@ -94,3 +98,6 @@ accounting.showSubjects();
 console.log(accounting.mostRecentReport);
 accounting.mostRecentReport = "Test";
 accounting.getReports();
+
+const employee = Department.createEmployee("Rakib");
+console.log(employee);

@@ -22,6 +22,9 @@ var Department = /** @class */ (function () {
         this.subjects = [];
         // this.name = name;
     }
+    Department.createEmployee = function (name) {
+        return { name: name };
+    };
     Department.prototype.describe = function () {
         console.log("Department(" + this.id + "): " + this.name);
     };
@@ -103,3 +106,5 @@ accounting.showSubjects();
 console.log(accounting.mostRecentReport);
 accounting.mostRecentReport = "Test";
 accounting.getReports();
+var employee = Department.createEmployee("Rakib");
+console.log(employee);
