@@ -46,6 +46,7 @@ var ITDepartment = /** @class */ (function (_super) {
 }(Department));
 var computer = new ITDepartment(66, "computer", ["sakil"]);
 computer.addSubjects("Data structure and algorithm");
+computer.addSubjects("Computer");
 computer.showSubjects();
 computer.describe();
 console.log(computer);
@@ -62,10 +63,17 @@ var AccountingDepartment = /** @class */ (function (_super) {
     AccountingDepartment.prototype.getReports = function () {
         console.log("reports: " + this.reports);
     };
+    AccountingDepartment.prototype.addSubjects = function (subjectName) {
+        if (subjectName === "Computer") {
+            return;
+        }
+        this.subjects.push(subjectName);
+    };
     return AccountingDepartment;
 }(Department));
 var accounting = new AccountingDepartment(88, "Accounting", []);
 accounting.addReport("Hello this is report");
 accounting.getReports();
-accounting.addSubjects("Business Organization and communication");
+accounting.addSubjects("Computer");
+accounting.addSubjects("Business Organization and communications");
 accounting.showSubjects();

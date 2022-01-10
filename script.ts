@@ -1,6 +1,6 @@
 class Department {
   // private name:string;
-  private subjects: string[] = [];
+  protected subjects: string[] = [];
 
   constructor(private readonly id: number | string, private name: string) {
     // this.name = name;
@@ -31,6 +31,7 @@ class ITDepartment extends Department {
 const computer = new ITDepartment(66, "computer", ["sakil"]);
 
 computer.addSubjects("Data structure and algorithm");
+computer.addSubjects("Computer");
 computer.showSubjects();
 computer.describe();
 
@@ -48,11 +49,20 @@ class AccountingDepartment extends Department {
   getReports() {
     console.log(`reports: ${this.reports}`);
   }
+
+  addSubjects(subjectName: string): void {
+    if (subjectName === "Computer") {
+      return;
+    }
+
+    this.subjects.push(subjectName);
+  }
 }
 
 const accounting = new AccountingDepartment(88, "Accounting", []);
 
 accounting.addReport("Hello this is report");
 accounting.getReports();
-accounting.addSubjects("Business Organization and communication");
+accounting.addSubjects("Computer");
+accounting.addSubjects("Business Organization and communications");
 accounting.showSubjects();
