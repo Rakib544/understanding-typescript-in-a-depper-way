@@ -38,18 +38,40 @@ computer.describe();
 console.log(computer);
 
 class AccountingDepartment extends Department {
+  private lastReports: string;
+
+  get mostRecentReport() {
+    if (this.lastReports) {
+      return this.lastReports;
+    }
+
+    throw new Error("No report found. ");
+  }
+
+  set mostRecentReport(value: string) {
+    // console.log({ value });
+    if (value) {
+      this.addReport(value);
+      return;
+    }
+    throw new Error("Please pass in a valid value");
+  }
+
   constructor(id: number | string, name: string, public reports: string[]) {
     super(id, name);
+    this.lastReports = reports[0];
   }
 
   addReport(report: string) {
     this.reports.push(report);
+    this.lastReports = report;
   }
 
   getReports() {
     console.log(`reports: ${this.reports}`);
   }
 
+  // overriding addSubjects() method.
   addSubjects(subjectName: string): void {
     if (subjectName === "Computer") {
       return;
@@ -61,8 +83,14 @@ class AccountingDepartment extends Department {
 
 const accounting = new AccountingDepartment(88, "Accounting", []);
 
+// console.log(accounting.mostRecentReport);
+
 accounting.addReport("Hello this is report");
+accounting.addReport("Hello this is report1");
 accounting.getReports();
 accounting.addSubjects("Computer");
 accounting.addSubjects("Business Organization and communications");
 accounting.showSubjects();
+console.log(accounting.mostRecentReport);
+accounting.mostRecentReport = "Test";
+accounting.getReports();

@@ -55,14 +55,35 @@ var AccountingDepartment = /** @class */ (function (_super) {
     function AccountingDepartment(id, name, reports) {
         var _this = _super.call(this, id, name) || this;
         _this.reports = reports;
+        _this.lastReports = reports[0];
         return _this;
     }
+    Object.defineProperty(AccountingDepartment.prototype, "mostRecentReport", {
+        get: function () {
+            if (this.lastReports) {
+                return this.lastReports;
+            }
+            throw new Error("No report found. ");
+        },
+        set: function (value) {
+            // console.log({ value });
+            if (value) {
+                this.addReport(value);
+                return;
+            }
+            throw new Error("Please pass in a valid value");
+        },
+        enumerable: false,
+        configurable: true
+    });
     AccountingDepartment.prototype.addReport = function (report) {
         this.reports.push(report);
+        this.lastReports = report;
     };
     AccountingDepartment.prototype.getReports = function () {
         console.log("reports: " + this.reports);
     };
+    // overriding addSubjects() method.
     AccountingDepartment.prototype.addSubjects = function (subjectName) {
         if (subjectName === "Computer") {
             return;
@@ -72,8 +93,13 @@ var AccountingDepartment = /** @class */ (function (_super) {
     return AccountingDepartment;
 }(Department));
 var accounting = new AccountingDepartment(88, "Accounting", []);
+// console.log(accounting.mostRecentReport);
 accounting.addReport("Hello this is report");
+accounting.addReport("Hello this is report1");
 accounting.getReports();
 accounting.addSubjects("Computer");
 accounting.addSubjects("Business Organization and communications");
 accounting.showSubjects();
+console.log(accounting.mostRecentReport);
+accounting.mostRecentReport = "Test";
+accounting.getReports();
