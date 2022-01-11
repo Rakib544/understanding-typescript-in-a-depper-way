@@ -108,3 +108,4 @@ accounting.mostRecentReport = "Test";
 accounting.getReports();
 var employee = Department.createEmployee("Rakib");
 console.log(employee);
+console.log(employee.name);
