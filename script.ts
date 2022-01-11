@@ -101,3 +101,4 @@ accounting.getReports();
 
 const employee = Department.createEmployee("Rakib");
 console.log(employee);
+console.log(employee.name);
