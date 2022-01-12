@@ -39,3 +39,27 @@ function showEmployeeInfo(emp: EmployeeCombine) {
 }
 
 showEmployeeInfo(user5);
+
+interface Bird {
+  type: "bird";
+  flyingSpeed: number;
+}
+
+interface Horse {
+  type: "horse";
+  runningSpeed: number;
+}
+
+type Animal = Bird | Horse;
+
+function moveAnimal(animal: Animal) {
+  switch (animal.type) {
+    case "bird":
+      console.log(`Move with speed: ${animal.flyingSpeed}`);
+      break;
+    case "horse":
+      console.log(`Move with speed: ${animal.runningSpeed}`);
+  }
+}
+
+moveAnimal({ type: "bird", flyingSpeed: 90 });

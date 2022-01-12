@@ -16,3 +16,13 @@ function showEmployeeInfo(emp) {
     }
 }
 showEmployeeInfo(user5);
+function moveAnimal(animal) {
+    switch (animal.type) {
+        case "bird":
+            console.log("Move with speed: " + animal.flyingSpeed);
+            break;
+        case "horse":
+            console.log("Move with speed: " + animal.runningSpeed);
+    }
+}
+moveAnimal({ type: "bird", flyingSpeed: 90 });
