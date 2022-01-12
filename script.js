@@ -6,3 +6,13 @@ var user5 = {
     isLogin: true,
 };
 var number10 = 10;
+function showEmployeeInfo(emp) {
+    console.log("Name is: " + emp.name);
+    if ("privilege" in emp) {
+        console.log("Privileges are : " + emp.privilege);
+    }
+    if ("isLogin" in emp) {
+        console.log("Is loggedIn: " + emp.isLogin);
+    }
+}
+showEmployeeInfo(user5);
