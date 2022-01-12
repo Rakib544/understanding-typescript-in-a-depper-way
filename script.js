@@ -25,4 +25,8 @@ function moveAnimal(animal) {
             console.log("Move with speed: " + animal.runningSpeed);
     }
 }
-moveAnimal({ type: "bird", flyingSpeed: 90 });
+moveAnimal({ type: "horse", runningSpeed: 90 });
+// Practice with type casting
+// const userInputElement = <HTMLInputElement>document.getElementById("user-input")!;
+var userInputElement = document.getElementById("user-input");
+userInputElement.value = "Hello world";
