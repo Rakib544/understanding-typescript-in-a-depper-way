@@ -17,6 +17,7 @@
 
 interface Named {
   readonly name: string;
+  outputName?: string;
 }
 
 interface Greetable extends Named {
@@ -39,12 +40,12 @@ class Person implements Greetable {
 const user1: Greetable = new Person("Rakib");
 user1.greet("Hello");
 
-// How to define function structure using interface
+// // How to define function structure using interface
 
-interface AddFunction {
-  (number1: number, number2: number): number;
-}
+// interface AddFunction {
+//   (number1: number, number2: number): number;
+// }
 
-const addNumber: AddFunction = (num1: number, num2: number) => {
-  return num1 + num2;
-};
+// const addNumber: AddFunction = (num1: number, num2: number) => {
+//   return num1 + num2;
+// };

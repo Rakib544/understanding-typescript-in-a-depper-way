@@ -14,6 +14,10 @@ var Person = /** @class */ (function () {
 }());
 var user1 = new Person("Rakib");
 user1.greet("Hello");
-var addNumber = function (num1, num2) {
-    return num1 + num2;
-};
+// // How to define function structure using interface
+// interface AddFunction {
+//   (number1: number, number2: number): number;
+// }
+// const addNumber: AddFunction = (num1: number, num2: number) => {
+//   return num1 + num2;
+// };
