@@ -14,3 +14,6 @@ var Person = /** @class */ (function () {
 }());
 var user1 = new Person("Rakib");
 user1.greet("Hello");
+var addNumber = function (num1, num2) {
+    return num1 + num2;
+};
