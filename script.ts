@@ -15,9 +15,11 @@
 
 // rakib.greet("Hello");
 
-interface Greetable {
-  name: string;
+interface Named {
+  readonly name: string;
+}
 
+interface Greetable extends Named {
   greet(phrase: string): void;
 }
 
@@ -34,5 +36,5 @@ class Person implements Greetable {
   }
 }
 
-const user1 = new Person("Rakib");
+const user1: Greetable = new Person("Rakib");
 user1.greet("Hello");
