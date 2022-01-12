@@ -1,2 +1,9 @@
 "use strict";
-console.log("Practice with interfaces");
+var rakib = {
+    name: "Rakib",
+    age: 21,
+    greet: function (speech) {
+        console.log(speech + " " + this.name);
+    },
+};
+rakib.greet("Hello");
