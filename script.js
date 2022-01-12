@@ -1,9 +1,16 @@
 "use strict";
-var rakib = {
-    name: "Rakib",
-    age: 21,
-    greet: function (speech) {
-        console.log(speech + " " + this.name);
-    },
-};
-rakib.greet("Hello");
+// interface Person {
+//   name: string;
+//   age: number;
+var Person = /** @class */ (function () {
+    function Person(name) {
+        this.age = 30;
+        this.name = name;
+    }
+    Person.prototype.greet = function (phrase) {
+        console.log(phrase + " " + this.name);
+    };
+    return Person;
+}());
+var user1 = new Person("Rakib");
+user1.greet("Hello");
