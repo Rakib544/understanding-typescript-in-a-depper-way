@@ -80,3 +80,4 @@ const fetchUserData = {
 };
 
 console.log(fetchUserData?.info);
+console.log("Hello world!");
