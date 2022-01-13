@@ -30,3 +30,9 @@ moveAnimal({ type: "horse", runningSpeed: 90 });
 // const userInputElement = <HTMLInputElement>document.getElementById("user-input")!;
 var userInputElement = document.getElementById("user-input");
 userInputElement.value = "Hello world";
+var fetchUserData = {
+    name: "Rakib",
+    id: 1,
+    info: { title: "Student", institute: "Dhaka Polytechnic Institute" },
+};
+console.log(fetchUserData === null || fetchUserData === void 0 ? void 0 : fetchUserData.info);

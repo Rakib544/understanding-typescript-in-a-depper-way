@@ -72,3 +72,11 @@ const userInputElement = document.getElementById(
 )! as HTMLInputElement;
 
 userInputElement.value = "Hello world";
+
+const fetchUserData = {
+  name: "Rakib",
+  id: 1,
+  info: { title: "Student", institute: "Dhaka Polytechnic Institute" },
+};
+
+console.log(fetchUserData?.info);
