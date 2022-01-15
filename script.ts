@@ -81,3 +81,6 @@ const fetchUserData = {
 
 console.log(fetchUserData?.info);
 console.log("New line of code");
+
+console.log(fetchUserData?.info);
+console.log("New line of code");
