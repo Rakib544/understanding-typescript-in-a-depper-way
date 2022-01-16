@@ -38,4 +38,3 @@ var fetchUserData = {
 console.log(fetchUserData === null || fetchUserData === void 0 ? void 0 : fetchUserData.info);
 console.log("New line of code");
 console.log(fetchUserData === null || fetchUserData === void 0 ? void 0 : fetchUserData.info);
-console.log("New line of code");
