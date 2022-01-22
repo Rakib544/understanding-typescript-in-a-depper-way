@@ -35,4 +35,4 @@ var fetchUserData = {
     id: 1,
     info: { title: "Student", institute: "Dhaka Polytechnic Institute" },
 };
-console.log(fetchUserData === null || fetchUserData === void 0 ? void 0 : fetchUserData.info);
+// console.log(fetchUserData?.info);
