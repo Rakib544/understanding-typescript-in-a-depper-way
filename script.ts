@@ -79,5 +79,5 @@ const fetchUserData = {
   info: { title: "Student", institute: "Dhaka Polytechnic Institute" },
 };
 
-console.log(fetchUserData?.info);
-console.log(fetchUserData?.info);
+// console.log(fetchUserData?.info);
+// console.log(fetchUserData?.info);
